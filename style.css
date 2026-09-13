@@ -1,0 +1,81 @@
+:root {
+    --color-fondo: #f4f6f8;
+    --color-texto: #333;
+    --color-primario: #0b1c3a;
+    --color-acierto: #28a745;
+    --color-error: #dc3545;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+.contenedor {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--color-primario);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+#temporizador {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+.pregunta-bloque {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.opciones label {
+    display: block;
+    background: #f8f9fa;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    transition: background 0.2s;
+}
+.opciones label:hover {
+    background: #e9ecef;
+}
+button {
+    background-color: var(--color-primario);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+}
+.retroalimentacion {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin-top: 15px;
+    font-size: 0.9em;
+    border-radius: 4px;
+}
+.oculto { display: none; }
+.correcta { background-color: #d4edda !important; border-color: var(--color-acierto) !important; }
+.incorrecta { background-color: #f8d7da !important; border-color: var(--color-error) !important; }
+
+@media (max-width: 600px) {
+    header { flex-direction: column; text-align: center; gap: 10px; }
+    .contenedor { padding: 15px; margin-top: 10px; }
+}
